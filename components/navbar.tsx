@@ -30,11 +30,11 @@ export default function Navbar() {
           <LayoutDashboard className="w-5 h-5 mr-2" />
           <span>Dashboard</span>
         </NavLink>
-        <Button variant="ghost" className="text-white hover:text-purple-400" asChild>
-          <Link href="/signin">Sign In</Link>
+        <Button variant="ghost" className="text-gray-500 cursor-not-allowed" disabled>
+          Sign In
         </Button>
-        <Button className="bg-purple-600 hover:bg-purple-700 text-white" asChild>
-          <Link href="/signup">Get Started</Link>
+        <Button className="bg-gray-600 text-gray-400 cursor-not-allowed" disabled>
+          Get Started
         </Button>
       </div>
 
@@ -46,10 +46,21 @@ export default function Navbar() {
 }
 
 function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+  const isDashboard = href === "https://dashboard.lingolancers.com";
+  
+  if (isDashboard) {
+    return (
+      <Link href={href} className="text-gray-300 hover:text-white transition-colors relative group flex items-center">
+        {children}
+        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-500 transition-all group-hover:w-full" />
+      </Link>
+    )
+  }
+
   return (
-    <Link href={href} className="text-gray-300 hover:text-white transition-colors relative group flex items-center">
+    <span className="text-gray-500 cursor-not-allowed relative group flex items-center">
       {children}
-      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-500 transition-all group-hover:w-full" />
-    </Link>
+      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-500 transition-all" />
+    </span>
   )
 }

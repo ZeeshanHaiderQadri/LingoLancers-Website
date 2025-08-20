@@ -21,7 +21,7 @@ export default function Hero() {
               Do Any AI Task With the Power of
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                 {" "}
-                Lingo Lancers 
+                Lingo Lancers Your Voice Assistant COMING SOON
               </span>
             </h1>
           </motion.div>
@@ -43,11 +43,11 @@ export default function Hero() {
           >
             <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-8">
               <FileText className="mr-2 h-5 w-5" />
-              Upload Paper
+              Try Now
             </Button>
             <Button size="lg" variant="outline" className="text-white border-purple-500 hover:bg-purple-500/20">
               <Sparkles className="mr-2 h-5 w-5" />
-              See Examples
+              See Lingo in Action
             </Button>
           </motion.div>
         </div>

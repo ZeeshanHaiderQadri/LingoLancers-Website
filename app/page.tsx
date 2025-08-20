@@ -1,5 +1,6 @@
 import Hero from "@/components/hero"
 import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
 import Sparkles from "@/components/sparkles"
 
 export default function Home() {
@@ -22,6 +23,8 @@ export default function Home() {
         <Navbar />
         <Hero />
       </div>
+      
+      <Footer />
     </main>
   )
 }
